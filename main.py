@@ -74,3 +74,10 @@ while True:
     
     pygame.display.update()
     FramePerSec.tick(FPS)
+
+def move(self):
+    self.acc = vec(0,0.5)
+
+    pressed_keys = pygame.key.get_pressed()
+    ...
+    ...
