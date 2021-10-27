@@ -81,3 +81,23 @@ def move(self):
     pressed_keys = pygame.key.get_pressed()
     ...
     ...
+
+pygame.sprite.spritecollide( sprite, sprite_group, delete)
+   ... 
+   def update(self):
+        hits = pygame.sprite.spritecollide(P1 , platforms, False)
+        if hits:
+            self.pos.y = hits[0].rect.top + 1
+            self.vel.y = 0
+
+
+platforms = pygame.sprite.Group()
+platforms.add(PT1)
+
+def jump(self):
+    self.vel.y = -15
+
+while True:
+    for event in pygame.event.get():
+        pygame.quit()
+        sys.exit()
