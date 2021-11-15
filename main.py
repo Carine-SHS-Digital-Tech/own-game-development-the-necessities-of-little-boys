@@ -154,7 +154,7 @@ while True:
         if event.type == pygame.KEYUP:    
             if event.key == pygame.K_SPACE:
                 P1.cancel_jump()  
- `
+
     if P1.rect.top <= HEIGHT / 3:
         P1.pos.y += abs(P1.vel.y)
         for plat in platforms:
