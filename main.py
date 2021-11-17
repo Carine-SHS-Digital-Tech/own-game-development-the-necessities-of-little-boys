@@ -153,18 +153,13 @@ while True:
                 P1.jump()
         if event.type == pygame.KEYUP:    
             if event.key == pygame.K_SPACE:
-                P1.cancel_jump()  
- `
+                P1.cancel_jump()
     if P1.rect.top <= HEIGHT / 3:
         P1.pos.y += abs(P1.vel.y)
         for plat in platforms:
             plat.rect.y += abs(P1.vel.y)
             if plat.rect.top >= HEIGHT:
                 plat.kill()
-
-
-
-    while True:
 
         if P1.rect.top > HEIGHT:
             for entity in all_sprites:
