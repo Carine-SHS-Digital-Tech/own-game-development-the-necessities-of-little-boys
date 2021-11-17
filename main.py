@@ -23,7 +23,7 @@ class Player(pygame.sprite.Sprite):
         super().__init__() 
         #self.image = pygame.image.load("character.png")
         self.surf = pygame.Surface((30, 30))
-        self.surf.fill((255,50,0))
+        self.surf.fill((50,50,100))                                 #CHARACTER COLOUR
         self.rect = self.surf.get_rect()
    
         self.pos = vec((10, 360))
@@ -81,7 +81,7 @@ class platform(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
         self.surf = pygame.Surface((random.randint(50,100), 12))
-        self.surf.fill((0,255,0))
+        self.surf.fill((255,255,255))                                                   #PLATFORM COLOUR
         self.rect = self.surf.get_rect(center = (random.randint(0,WIDTH-10),
                                                  random.randint(0, HEIGHT-30)))
         self.moving = True
@@ -122,7 +122,7 @@ PT1 = platform()
 P1 = Player()
  
 PT1.surf = pygame.Surface((WIDTH, 20))
-PT1.surf.fill((255,0,0))
+PT1.surf.fill((255,255,0))                                                        #GROUND COLOUR
 PT1.rect = PT1.surf.get_rect(center = (WIDTH/2, HEIGHT - 10))
  
 all_sprites = pygame.sprite.Group()
@@ -172,7 +172,7 @@ while True:
                 sys.exit()
 
     plat_gen()
-    displaysurface.fill((0,0,0))
+    displaysurface.fill((50,255,255))                                                    #BACKGROUND COLOUR
     f = pygame.font.SysFont("Verdana", 20)
     g = f.render(str(P1.score), True, (123, 255, 0))
     displaysurface.blit(g, (WIDTH/2, 10))
